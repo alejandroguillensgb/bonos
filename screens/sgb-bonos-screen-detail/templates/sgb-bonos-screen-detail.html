@@ -1,0 +1,68 @@
+<ion-view mz-screen view-title="{{ params.title | translate }}">
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                Nombre
+            </div>
+                <div class="item row">
+                    <div class="col thick">
+                        {{ data['lightbox_link/_text'] }}
+                    </div>
+                </div>
+                <div class="item row">
+                    <div class="col">
+                        {{ data['collarge_value'] }}
+                    </div>
+                </div>
+                <div class="item row">
+                    <div class="col">
+                        {{ data['date_value_1'] }} 
+                        <span class="item-note">
+                            {{ data['hora_label'] }}
+                        </span>
+                    </div>
+                </div>
+            <div class="item item-divider">
+                Precio
+            </div>
+                <div class="item row">
+                    <div class="col thick">
+                        {{ data['col_number_1/_source'] }}% 
+                    </div>
+                </div>
+                <div class="item row">
+                    <div class="col col-50">
+                        {{ data['cierre_label'] }}: 
+                        <span class="thick" ng-class="data['cierre_value'][0]!='-'?'positive':'negative'">
+                            {{ data['cierre_value'] }}
+                        </span>
+                    </div>
+                    <div class="col col-50">
+                        {{ data['intraday_label'] }}: 
+                        <span class="thick" ng-class="data['intraday_number']>0?'positive':'negative'">
+                            {{ data['intraday_number/_source'] }}%
+                        </span>
+                    </div>
+                </div>
+            <div class="item item-divider">
+                YTM
+            </div>
+                <div class="item row">
+                    <div class="col thick">
+                        {{ data['col_number_2/_source'] }}% 
+                    </div>
+                </div>
+            <div class="item item-divider">
+                Bid/Ask
+            </div>
+                <div class="item row">
+                    <div class="col col-50 thick">
+                        {{ data['col_value_1'] }}
+                    </div>
+                    <div class="col col-50 thick">
+                        {{ data['col_value_2'] }}
+                    </div>
+                </div>
+        </div>
+    </ion-content>
+</ion-view>

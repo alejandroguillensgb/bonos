@@ -1,0 +1,27 @@
+<ion-view view-title="{{ params.title | translate }}" class="appBackground">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="update()">
+        </ion-refresher>
+        <div class="card">
+            <a class="item" ng-repeat="result in results" ng-class="results.indexOf(result)%2 == 0?'even':''" ng-click="goTo('goToDetails', result)">
+                <div class="row thick">
+                    {{ result['lightbox_link/_text'] }}
+                </div>
+                <div class="row">
+                    <div class="col col-50">
+                        Precio: 
+                        <span class="thick">
+                            {{ result['col_number_1/_source'] }}%
+                        </span>
+                    </div>
+                    <div class="col col-50">
+                        YTM: 
+                        <span class="thick">
+                            {{ result['col_number_2/_source'] }}%
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>
