@@ -3,7 +3,10 @@
  * Refer to the documentation for details.
  */
 export var routes : Megazord.RouterConfig = {
-    "header.list": {
-        goToDetails: "header.detail"
+    "header.indicadores": {
+        goToRFI: "header.rfi"
+    },
+    "header.rfi": {
+        goToDetails: "header.rfiDetail"
     }
 };
